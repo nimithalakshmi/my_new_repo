@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add two numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        div {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        div > div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <div><label for="firstNumber">first number</label>
+                 <input type="text" id="firstNumber"/></div>
+            <div><label for="secondNumber">second number</label>
+                <input type="text" id="secondNumber"/></div>
+            <div><label for="sumNumber">sum</label>
+                <input type="text" id="sumNumber"/></div>
+            <button type="button" onclick="doAdd();">Add</button>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function doAdd() {
+            let first = parseInt(document.getElementById("firstNumber").value);
+            let second = parseInt(document.getElementById("secondNumber").value);
+            let sum = first + second;
+            document.getElementById("sumNumber").value = sum;
+        }
+    </script>
+    
+</body>
+</html>
